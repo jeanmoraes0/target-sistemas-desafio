@@ -6,7 +6,7 @@ import locale
 
 locale.setlocale(locale.LC_ALL, "pt_BR.utf-8")
 
-with open(f"{os.getcwd()}\\dados.json", encoding="utf8") as arquivo_json:
+with open(os.path.join(os.getcwd(), "dados.json"), encoding="utf8") as arquivo_json:
     dados = json.load(arquivo_json)
 
 maior = max(dados, key=lambda x: x["valor"])
